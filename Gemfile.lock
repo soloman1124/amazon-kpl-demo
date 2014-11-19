@@ -1,0 +1,10 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    amazon-kinesis-client-ruby (0.0.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  amazon-kinesis-client-ruby
