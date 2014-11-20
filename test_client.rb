@@ -8,5 +8,15 @@ class SimpleProcessor < Kcl::AdvancedRecordProcessor
   end
 end
 
+Kcl::Executor.new do |executor|
+  executor.config stream_name: 'data-kinesis-EventQueue-3IGL5ISZIUIZ',
+                  applicationName: 'RubyKCLSample',
+                  max_records: 5,
+                  idle_time_between_reads_in_millis: 500
 
-SimpleProcessor.new.run
+  executor.record_processor do
+    SimpleProcessor.new
+  end
+end
+
+Kcl::Executor.run
