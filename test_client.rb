@@ -10,7 +10,7 @@ end
 
 Kcl::Executor.new do |executor|
   executor.config stream_name: 'data-kinesis-EventQueue-3IGL5ISZIUIZ',
-                  applicationName: 'RubyKCLSample',
+                  application_name: 'RubyKCLSample',
                   max_records: 5,
                   idle_time_between_reads_in_millis: 500
 
